@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: randomstringset-controller
+  labels:
+    app: randomstringset-controller
+spec:
+  selector:
+    matchLabels:
+      app: randomstringset-controller
+  template:
+    metadata:
+      labels:
+        app: randomstringset-controller
+    spec:
+      containers:
+        - name: controller
+          image: controller
+          args:
+            - --listen-address
+            - "8080"
+          resources:
+            limits:
+              memory: "64Mi"
+              cpu: "100m"
+          ports:
+            - containerPort: 8080
+              name: http

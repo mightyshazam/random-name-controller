@@ -1,0 +1,4 @@
+resources:
+  - https://github.com/metacontroller/metacontroller/manifests/production
+  - ../controller
+  - randomstringset.example.yaml

@@ -1,0 +1,5 @@
+resources:
+  - crd
+  - compositecontroller.randomstringset-controller.yaml
+  - deployment.randomstringset-controller.yaml
+  - service.randomstringset-controller.yaml

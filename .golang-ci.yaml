@@ -1,0 +1,5 @@
+run:
+  skip-dirs: []
+linters-settings:
+  exhaustive:
+    default-signifies-exhaustive: true

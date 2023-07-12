@@ -1,0 +1,21 @@
+apiVersion: randomstrings.io/v1
+kind: RandomStringSet
+metadata:
+  name: example
+spec:
+  name: example
+  entries:
+    - name: first
+    - name: second
+      rules:
+        length: 30
+    - name: third
+      rules:
+        symbols: 5
+    - name: fourth
+      rules:
+        length: 63
+        symbols: 15
+        numbers: 15
+        allowUpper: true
+        allowRepeat: true
