@@ -29,10 +29,6 @@ jobs:
           version: latest
           install-only: true
       - name: "Build:dockerimage"
-        uses: docker/build-push-action@v1
+        uses: docker/build-push-action@v4
         with:
-          registry: ghcr.io
-          username: "mightyshzam"
-          password: ${{ secrets.PAT }}
-          repository: mightyshazam/random-name-controller
           tags: latest
