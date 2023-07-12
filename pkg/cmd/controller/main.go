@@ -10,15 +10,7 @@ import (
 
 var (
 	flags = struct {
-		listenAddress          string
-		containerImage         string
-		serviceaccount         string
-		usePodIdentity         bool
-		podIdentityLabel       string
-		podIdentity            string
-		secretStoreCredentials string
-		masterUrl              string
-		useVmIdentity          bool
+		listenAddress string
 	}{}
 )
 
