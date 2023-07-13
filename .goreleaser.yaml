@@ -11,14 +11,10 @@ builds:
     main: ./pkg/cmd/controller
     goos:
       - linux
-      - windows
       - darwin
     goarch:
       - amd64
-      - arm
       - arm64
-      - "386"
-      - s390x
     goarm:
       - "6"
       - "7"
@@ -61,53 +57,12 @@ dockers:
       - --label=org.opencontainers.image.created={{ .Date }}
       - --label=org.opencontainers.image.revision={{ .FullCommit }}
       - --label=org.opencontainers.image.licenses=Apache-2.0
-  - image_templates:
-      - "{{ .Env.REPOSITORY_OWNER }}io/{{ .ProjectName }}:v{{ .Version }}-armv7"
-      - "ghcr.io/{{ .Env.REPOSITORY_OWNER }}/{{ .ProjectName }}:v{{ .Version }}-armv7"
-    goarch: arm64
-    dockerfile: Dockerfile
-    use: buildx
-    build_flag_templates:
-      - --platform=linux/arm/v7
-      - --label=org.opencontainers.image.title={{ .ProjectName }}
-      - --label=org.opencontainers.image.description={{ .ProjectName }}
-      - --label=org.opencontainers.image.url=https://github.com/mightyshazam/{{ .ProjectName }}
-      - --label=org.opencontainers.image.source=https://github.com/mightyshazam/{{ .ProjectName }}
-      - --label=org.opencontainers.image.version=v{{ .Version }}
-      - --label=org.opencontainers.image.created={{ .Date }}
-      - --label=org.opencontainers.image.revision={{ .FullCommit }}
-      - --label=org.opencontainers.image.licenses=Apache-2.0
-  - image_templates:
-      - "{{ .Env.REPOSITORY_OWNER }}io/{{ .ProjectName }}:v{{ .Version }}-s390x"
-      - "ghcr.io/{{ .Env.REPOSITORY_OWNER }}/{{ .ProjectName }}:v{{ .Version }}-s390x"
-    goarch: s390x
-    dockerfile: Dockerfile
-    use: buildx
-    build_flag_templates:
-      - --platform=linux/s390x
-      - --label=org.opencontainers.image.title={{ .ProjectName }}
-      - --label=org.opencontainers.image.description={{ .ProjectName }}
-      - --label=org.opencontainers.image.url=https://github.com/mightyshazam/{{ .ProjectName }}
-      - --label=org.opencontainers.image.source=https://github.com/mightyshazam/{{ .ProjectName }}
-      - --label=org.opencontainers.image.version=v{{ .Version }}
-      - --label=org.opencontainers.image.created={{ .Date }}
-      - --label=org.opencontainers.image.revision={{ .FullCommit }}
-      - --label=org.opencontainers.image.licenses=Apache-2.0
 docker_manifests:
-  - name_template: "{{ .Env.REPOSITORY_OWNER }}io/{{ .ProjectName }}:v{{ .Version }}"
-    skip_push: "false"
-    image_templates:
-      - "{{ .Env.REPOSITORY_OWNER }}io/{{ .ProjectName }}:v{{ .Version }}-amd64"
-      - "{{ .Env.REPOSITORY_OWNER }}io/{{ .ProjectName }}:v{{ .Version }}-arm64v8"
-      - "{{ .Env.REPOSITORY_OWNER }}io/{{ .ProjectName }}:v{{ .Version }}-armv7"
-      - "{{ .Env.REPOSITORY_OWNER }}io/{{ .ProjectName }}:v{{ .Version }}-s390x"
   - name_template: ghcr.io/{{ .Env.REPOSITORY_OWNER }}/{{ .ProjectName }}:v{{ .Version }}
     skip_push: "false"
     image_templates:
       - "ghcr.io/{{ .Env.REPOSITORY_OWNER }}/{{ .ProjectName }}:v{{ .Version }}-amd64"
       - "ghcr.io/{{ .Env.REPOSITORY_OWNER }}/{{ .ProjectName }}:v{{ .Version }}-arm64v8"
-      - "ghcr.io/{{ .Env.REPOSITORY_OWNER }}/{{ .ProjectName }}:v{{ .Version }}-armv7"
-      - "ghcr.io/{{ .Env.REPOSITORY_OWNER }}/{{ .ProjectName }}:v{{ .Version }}-s390x"
 checksum:
   name_template: "checksums.txt"
 snapshot:
