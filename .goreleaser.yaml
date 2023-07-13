@@ -27,13 +27,8 @@ builds:
     gcflags:
       - "{{ .Env.GC_FLAGS }}"
 # probably won't be used
-archives:
-  - replacements:
-      darwin: Darwin
-      linux: Linux
-      windows: Windows
-      386: i386
-      amd64: x86_64
+archives: []
+
 dockers:
   - image_templates:
       - "{{ .Env.REPOSITORY_OWNER }}io/{{ .ProjectName }}:v{{ .Version }}-amd64"
