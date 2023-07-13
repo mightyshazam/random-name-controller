@@ -36,6 +36,8 @@ jobs:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
       - name: Install GoReleaser
         uses: goreleaser/goreleaser-action@v4
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           distribution: goreleaser
           version: latest
