@@ -27,7 +27,6 @@ archives: []
 
 dockers:
   - image_templates:
-      - "{{ .Env.REPOSITORY_OWNER }}io/{{ .ProjectName }}:v{{ .Version }}-amd64"
       - "ghcr.io/{{ .Env.REPOSITORY_OWNER }}/{{ .ProjectName }}:v{{ .Version }}-amd64"
     dockerfile: Dockerfile
     use: buildx
@@ -42,7 +41,6 @@ dockers:
       - --label=org.opencontainers.image.revision={{ .FullCommit }}
       - --label=org.opencontainers.image.licenses=Apache-2.0
   - image_templates:
-      - "{{ .Env.REPOSITORY_OWNER }}io/{{ .ProjectName }}:v{{ .Version }}-arm64v8"
       - "ghcr.io/{{ .Env.REPOSITORY_OWNER }}/{{ .ProjectName }}:v{{ .Version }}-arm64v8"
     goarch: arm64
     dockerfile: Dockerfile
