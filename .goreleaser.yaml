@@ -39,8 +39,8 @@ dockers:
       - --platform=linux/amd64
       - --label=org.opencontainers.image.title={{ .ProjectName }}
       - --label=org.opencontainers.image.description={{ .ProjectName }}
-      - --label=org.opencontainers.image.url=https://github.com/metacontroller/{{ .ProjectName }}
-      - --label=org.opencontainers.image.source=https://github.com/metacontroller/{{ .ProjectName }}
+      - --label=org.opencontainers.image.url=https://github.com/mightyshazam/{{ .ProjectName }}
+      - --label=org.opencontainers.image.source=https://github.com/mightyshazam/{{ .ProjectName }}
       - --label=org.opencontainers.image.version=v{{ .Version }}
       - --label=org.opencontainers.image.created={{ .Date }}
       - --label=org.opencontainers.image.revision={{ .FullCommit }}
@@ -55,8 +55,8 @@ dockers:
       - --platform=linux/arm64/v8
       - --label=org.opencontainers.image.title={{ .ProjectName }}
       - --label=org.opencontainers.image.description={{ .ProjectName }}
-      - --label=org.opencontainers.image.url=https://github.com/metacontroller/{{ .ProjectName }}
-      - --label=org.opencontainers.image.source=https://github.com/metacontroller/{{ .ProjectName }}
+      - --label=org.opencontainers.image.url=https://github.com/mightyshazam/{{ .ProjectName }}
+      - --label=org.opencontainers.image.source=https://github.com/mightyshazam/{{ .ProjectName }}
       - --label=org.opencontainers.image.version=v{{ .Version }}
       - --label=org.opencontainers.image.created={{ .Date }}
       - --label=org.opencontainers.image.revision={{ .FullCommit }}
@@ -71,8 +71,8 @@ dockers:
       - --platform=linux/arm/v7
       - --label=org.opencontainers.image.title={{ .ProjectName }}
       - --label=org.opencontainers.image.description={{ .ProjectName }}
-      - --label=org.opencontainers.image.url=https://github.com/metacontroller/{{ .ProjectName }}
-      - --label=org.opencontainers.image.source=https://github.com/metacontroller/{{ .ProjectName }}
+      - --label=org.opencontainers.image.url=https://github.com/mightyshazam/{{ .ProjectName }}
+      - --label=org.opencontainers.image.source=https://github.com/mightyshazam/{{ .ProjectName }}
       - --label=org.opencontainers.image.version=v{{ .Version }}
       - --label=org.opencontainers.image.created={{ .Date }}
       - --label=org.opencontainers.image.revision={{ .FullCommit }}
@@ -87,8 +87,8 @@ dockers:
       - --platform=linux/s390x
       - --label=org.opencontainers.image.title={{ .ProjectName }}
       - --label=org.opencontainers.image.description={{ .ProjectName }}
-      - --label=org.opencontainers.image.url=https://github.com/metacontroller/{{ .ProjectName }}
-      - --label=org.opencontainers.image.source=https://github.com/metacontroller/{{ .ProjectName }}
+      - --label=org.opencontainers.image.url=https://github.com/mightyshazam/{{ .ProjectName }}
+      - --label=org.opencontainers.image.source=https://github.com/mightyshazam/{{ .ProjectName }}
       - --label=org.opencontainers.image.version=v{{ .Version }}
       - --label=org.opencontainers.image.created={{ .Date }}
       - --label=org.opencontainers.image.revision={{ .FullCommit }}
