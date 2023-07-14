@@ -1,5 +1,5 @@
 resources:
-  - crd
   - compositecontroller.randomstringset-controller.yaml
+  - crdv1.randomstringsets.randomstrings.io.yaml
   - deployment.randomstringset-controller.yaml
   - service.randomstringset-controller.yaml
