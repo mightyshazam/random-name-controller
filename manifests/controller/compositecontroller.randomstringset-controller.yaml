@@ -2,6 +2,7 @@ apiVersion: metacontroller.k8s.io/v1alpha1
 kind: CompositeController
 metadata:
   name: randomstringset-controller
+  namespace: default
 spec:
   generateSelector: true
   parentResource:

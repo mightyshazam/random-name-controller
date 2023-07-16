@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: randomstringset-controller
+  namespace: default
 spec:
   selector:
     app: randomstringset-controller

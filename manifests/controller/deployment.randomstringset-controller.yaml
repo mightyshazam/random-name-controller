@@ -4,6 +4,7 @@ metadata:
   name: randomstringset-controller
   labels:
     app: randomstringset-controller
+  namespace: default
 spec:
   selector:
     matchLabels:
